@@ -1,0 +1,17 @@
+ROT file specification
+
+Abstract/Summary/intro:
+A plaintext file that basically allows for one time pads (I think?) that use
+Caesar shift (ROT) for encryption.
+
+How it works:
+Basically make a text file that has a series of elements that specifies how much
+to ROTate by. An encryption program will read the ROT file, such that the first
+character to be encrypted will be ROTated by the amount specified in the first
+element of the ROT file, the second to be encrypted by the second element, etc.
+
+These elements will either be comma separated integer values for easy reading
+(in case you need to print them out, I guess), or a single string of base 26
+numbers (which I just realised is simply the alphabet), for a smaller file size.
+
+That's about it, I think. Consider using Base 36 for alphanumeric ROTation.
